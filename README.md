@@ -1,2 +1,4 @@
-# 301-Final-Project
-Always Write: Note Taking App
+# 301-Final-Project: Note Taking App
+##Always Write
+Always Write is an app inspired by physical note cards. It is designed for quick
+use and faster reading.
