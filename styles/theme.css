@@ -1,1 +1,17 @@
 /*THEME STYLING INCLUDES CLASS/VISUAL MODS ONLY*/
+
+.write {
+  background-color: #EAC879;
+}
+
+.read {
+  background-color: #FFA500;
+  height: auto;
+}
+
+.connect {
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #B7B7B7;
+}
