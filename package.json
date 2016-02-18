@@ -1,0 +1,27 @@
+{
+  "name": "always-write-app",
+  "version": "1.0.0",
+  "description": "cf 301 final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THXBurke/301-Final-Project.git"
+  },
+  "keywords": [
+    "note",
+    "writing",
+    "code-fellows"
+  ],
+  "author": "rachel burke, anthony casson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THXBurke/301-Final-Project/issues"
+  },
+  "homepage": "https://github.com/THXBurke/301-Final-Project#readme",
+  "dependencies": {
+    "normalize.css": "^3.0.3"
+  }
+}
