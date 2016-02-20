@@ -38,9 +38,10 @@ ul {
 div {
   width: 200px;
   height: 120px;
-  margin: 50px;
-  background-color: white;
+  /*margin: 50px;*/
   box-shadow: 5px 5px 5px #555;
+  background-color: white;
+
 }
 
 form {
