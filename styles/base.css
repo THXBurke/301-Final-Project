@@ -3,7 +3,7 @@ header {
   display: flex;
   flex-direction: column;
   width: auto;
-  height: 200px;
+  height: 150px;
   background-color: #454343;
 }
 
@@ -32,12 +32,20 @@ ul {
   display: flex;
   flex-direction: row;
   color: white;
+  list-style-type: none;
 }
 
 div {
   width: 200px;
   height: 120px;
-  margin: 50px;
-  background-color: white;
+  /*margin: 50px;*/
   box-shadow: 5px 5px 5px #555;
+  background-color: white;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
