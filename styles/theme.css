@@ -1,0 +1,21 @@
+/*THEME STYLING INCLUDES CLASS/VISUAL MODS ONLY*/
+
+.write {
+  background-color: #D9B689;
+}
+
+.read {
+  background-color: #FFA500;
+  height: auto;
+}
+
+.connect {
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #B7B7B7;
+}
+
+.accordion-panel {
+  display: none;
+}

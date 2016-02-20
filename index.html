@@ -4,29 +4,40 @@
     <meta charset="utf-8">
     <title>Always Write</title>
     <link rel="stylesheet" href="./vendor-styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/theme.css">
+
   </head>
   <body>
     <header>
       <h1>Always Write</h1>
       <h2>Take Notes. Keep Sharp.</h2>
-      <ul>
-        <li>Write</li>
-        <li>Read</li>
-      </ul>
+      <ul>Write</ul>
+      <ul>Read</ul>
     </header>
     <section class="write">
-
     </section>
     <section class="read">
-
+      <ul class="accordion">
+        <li>
+          <button class="accordion-control">Card</button>
+          <div class="accordion-panel">Card content goes here...</div>
+        </li>
+      </ul>
     </section>
     <footer>
-
+      <ul class="connect">
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
     </footer>
 
     <!-- jquery -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <!-- Our scripts will go below this line -->
+    <script src="./scripts/readView.js"></script>
   </body>
 
 </html>
