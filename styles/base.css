@@ -4,7 +4,7 @@ header {
   flex-direction: column;
   width: auto;
   height: 200px;
-  background-color: #151E1E;
+  background-color: #454343;
 }
 
 section {
@@ -25,7 +25,7 @@ footer {
 }
 
 h1, h2 {
-  color: #EAC879;
+  color: #;
 }
 
 ul {
