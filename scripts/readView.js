@@ -5,12 +5,3 @@ $('.accordion').on('click', '.accordion-control', function(e) {
     .not(':animated')
     .slideToggle(200);
 });
-// 
-// $('.accordion-panel')
-//   .animate({
-//     height: 'show',
-//     paddingTop: 'show',
-//     paddingBottom: 'show',
-//     marginTop: 'show',
-//     marginBottom: 'show'
-//   });
