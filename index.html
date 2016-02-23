@@ -5,6 +5,7 @@
     <title>Always Write</title>
     <!-- <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./vendor-styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/theme.css">
@@ -28,11 +29,12 @@
      <textarea name="noteContent" id="noteContent" rows="5" cols="30"></textarea>
      <span id="noteContentCount" class="hide"></span> -->
       <form class="form" action="post">
-        <label for="card-name">Name Your Note</label>
+        <label for="card-name">Name It</label>
         <input id="card-name" type="text">
-        <label for="card-content">Put Your Note Content Here</label>
+        <label for="card-content">Write It</label>
         <textarea id="card-content" type="text"></textarea>
-        <button type="submit" name="button">Create a Note</button>
+        <span id="noteContentCount" class="hide"></span>
+        <button type="submit" name="button">Create It</button>
       </form>
     </section>
     <section class="read">
@@ -55,6 +57,7 @@
     <!-- Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <!-- Our scripts will go below this line -->
+    <script src='./scripts/features.js'></script>
     <script src="./scripts/readView.js"></script>
     <script src="./scripts/write.js"></script>
   </body>

@@ -1,6 +1,6 @@
 
 (function() {
-  var noteContent = document.getElementById('noteContent');
+  var noteContent = document.getElementById('card-content');
   var noteContentCount = document.getElementById('noteContentCount');
 
   noteContent.addEventListener('focus', updateCounter);

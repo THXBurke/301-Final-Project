@@ -5,6 +5,8 @@ header {
   width: auto;
   height: 75px;
   background-color: #454343;
+  max-width: 800px;
+  margin: 0px auto;
 }
 
 section {
@@ -12,7 +14,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: auto;
+  max-width: 800px;
+  margin: 0px auto;
 }
 
 footer {
@@ -22,10 +25,12 @@ footer {
   height: 200px;
   background-color: #FC3835;
   padding-top: 0px;
+  max-width: 800px;
+  margin: 0px auto;
 }
 
 h1, h2 {
-  color: #FFA500;
+  color: #fff;
 }
 
 ul {
