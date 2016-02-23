@@ -34,7 +34,16 @@
         <label for="card-content">Write It</label>
         <textarea id="card-content" type="text"></textarea>
         <span id="noteContentCount" class="hide"></span>
-        <button type="submit" name="button">Create It</button>
+        <label>Categorize It</label>
+        <div class="create-pile">
+          <input id="new-category" type="text" placeholder="add new category">
+          <label>Or</label>
+          <select id="pile-select" value="">
+            <option value="" disabled selected>Select your option</option>
+            <option>Miscelleaneous</option>
+          </select>
+        </div>
+        <button class="create-button" type="submit" name="button">Create It</button>
       </form>
     </section>
     <section class="read">

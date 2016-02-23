@@ -21,3 +21,16 @@
   color: blue;
   display: none;
 }
+
+.create-pile {
+  display: flex;
+  flex-direction: row;
+  width: 0px;
+  height: auto;
+  background-color: none;
+}
+
+.create-button {
+  margin: 10px 10px;
+  height: 100px;
+}
