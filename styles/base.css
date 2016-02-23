@@ -1,18 +1,18 @@
 /*BASE STYLING INCLUDES ELEMENT TAGS ONLY*/
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: auto;
-  height: 150px;
+  height: 75px;
   background-color: #454343;
 }
 
 section {
   border: black;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   width: auto;
-  height: 600px;
 }
 
 footer {
@@ -25,7 +25,7 @@ footer {
 }
 
 h1, h2 {
-  color: #;
+  color: #FFA500;
 }
 
 ul {

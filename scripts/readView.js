@@ -1,3 +1,4 @@
+var accordionExecute = function() {
 $('.accordion').on('click', '.accordion-control', function(e) {
   e.preventDefault();
   $(this)
@@ -5,3 +6,4 @@ $('.accordion').on('click', '.accordion-control', function(e) {
     .not(':animated')
     .slideToggle(200);
 });
+};
