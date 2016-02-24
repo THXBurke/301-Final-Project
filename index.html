@@ -30,16 +30,18 @@
         <label for="card-content">Write It</label>
         <textarea id="card-content" type="text"></textarea>
         <span id="noteContentCount" class="hide"></span>
-        <button type="submit" name="button">Create It</button>
+        <label>Add New Category or Select Existing</label>
+        <div class="create-pile">
+          <input id="new-category" type="text" placeholder="add new category">
+          <!-- <label>Or</label> -->
+          <select id="pile-select" value="">
+            <option disabled selected>Select your option</option>
+          </select>
+        </div>
+        <button class="create-button" type="submit" name="button">Create It</button>
       </form>
     </section>
     <section class="read">
-      <ul class="accordion">
-        <li>
-          <button class="accordion-control">Note</button>
-          <div class="accordion-panel">Note content goes here...</div>
-        </li>
-      </ul>
     </section>
     <footer>
       <ul class="connect">
