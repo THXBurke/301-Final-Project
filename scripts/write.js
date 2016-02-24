@@ -24,6 +24,7 @@ function Note(noteName, noteContent, pile){
       var myArray = [];
 
       $("form").submit(function(event) {
+        $('.accordion').remove();
         var description = $('#card-name').val();
         var content = $('#card-content').val();
         myArray.push(new Note(description, content));
