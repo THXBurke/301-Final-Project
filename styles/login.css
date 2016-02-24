@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 75px;
+  background-color: #454343;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+
+h1, h2 {
+  color: #fff;
+}
+
+section {
+  border: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
