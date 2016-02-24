@@ -22,8 +22,7 @@ section {
   margin: 0px auto;
 }
 
-fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+body {
+    background-image: url("");
+    background-color: #cccccc;
 }
