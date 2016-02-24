@@ -53,8 +53,19 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 5px 50px;
 }
 
 select {
   width: auto;
+}
+
+textarea {
+  margin-bottom: 5px;
+}
+
+b {
+  padding-top: 0px;
+  margin-top: 0px;
+  height: 20px;
 }
