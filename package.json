@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/THXBurke/301-Final-Project#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "normalize.css": "^3.0.3"
   }
 }
