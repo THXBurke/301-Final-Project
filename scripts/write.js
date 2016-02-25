@@ -1,54 +1,52 @@
-function Note(noteName, noteContent, category){
+function Card(noteName, noteContent, categoryAdd){
         this.noteName = noteName;
         this.noteContent = noteContent;
-        this.category = category;
+        this.categoryAdd = categoryAdd;
       }
 
-
-      Note.prototype.toHTML = function(){
+      Card.prototype.toHTML = function(){
         var template = Handlebars.compile($("#entry-template").text());
         return template(this);
       }
 
-      // function appendIt(){
-      //   $('.cards').remove(); //Removes any cards and appends them again. Eliminate replication.
-      //   myArray.forEach(function(note){
-      //     var newCard = '<div class="cards">';
-      //     newCard += '<h1>'+note.description+'</h1>';
-      //     newCard += '<p>'+note.content+'</p>';
-      //     newCard += '</div>';
-      //     $('.read').append(newCard);
-      //   });
-      // }
+      var cards = [];
 
-      var myArray = [];
-
+      /*** Submit New Card Handling ***/
       $("form").submit(function(event) {
-        $('.accordion').remove();
+        //$('.accordion').remove();
         var description = $('#card-name').val();
         var content = $('#card-content').val();
-        var category;
+        var categoryAdd;
           if($('#new-category').val()){
-            category = $('#new-category').val()
+            categoryAdd = $('#new-category').val();
+            catContain(categoryAdd);
           }else{
-            category = $('#pile-select').val()
+            categoryAdd = $('#pile-select').val();
           };
-        myArray.push(new Note(description, content, category));
-        console.log(myArray);
-        //appendIt();
-        myArray.forEach(function(note) {
-          $('.read').append(note.toHTML());
-        })
+        cards.push(new Card(description, content, categoryAdd));
+        console.log(cards);
+
+        var lastCard = cards.length - 1;
+        $('div'+'[value='+categoryAdd+']').append(cards[lastCard].toHTML());
+        //TODO: Problem - we remove everything at the beginning, which means we are appending everything to whatever the latest 'categoryAdd' is. We no longer want to remove everything, we only want to append whatever is the last card in the 'cards' array.
+        // cards.forEach(function(note) {
+        //   $('div'+'[value='+categoryAdd+']').append(note.toHTML());
+        // })
         accordionExecute();
         categories();
         event.preventDefault();
       });
-      console.log(myArray); // Delete later
+      console.log(cards); // Delete later
+
+      /*** New Category Container ***/
+      function catContain(cat) {
+        $('.read').append('<div class="read-category" value="'+cat+'"><h1>'+cat+'</h1></div>')
+      };
 
       /*** Category Dropdown ***/
       function categories(){
-        var uniqueCats = myArray.map(function(note) {
-          return note.category;
+        var uniqueCats = cards.map(function(note) {
+          return note.categoryAdd;
         }).reduce(function(arr, category){
           if(arr.indexOf(category) === -1){
             arr.push(category);
