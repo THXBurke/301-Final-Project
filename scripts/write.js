@@ -12,8 +12,9 @@ function Card(noteName, noteContent, categoryAdd){
       var cards = [];
 
       /*** Submit New Card Handling ***/
+
       $("form").submit(function(event) {
-        //$('.accordion').remove();
+        event.preventDefault();
         var description = $('#card-name').val();
         var content = $('#card-content').val();
         var categoryAdd;
@@ -27,33 +28,29 @@ function Card(noteName, noteContent, categoryAdd){
         console.log(cards);
 
         var lastCard = cards.length - 1;
-        $('div'+'[value='+categoryAdd+']').append(cards[lastCard].toHTML());
-        //TODO: Problem - we remove everything at the beginning, which means we are appending everything to whatever the latest 'categoryAdd' is. We no longer want to remove everything, we only want to append whatever is the last card in the 'cards' array.
-        // cards.forEach(function(note) {
-        //   $('div'+'[value='+categoryAdd+']').append(note.toHTML());
-        // })
+        $('div'+'[data-category='+'"'+categoryAdd+'"'+']').append(cards[lastCard].toHTML());
+
         accordionExecute();
         categories();
-        event.preventDefault();
+
       });
-      console.log(cards); // Delete later
 
       /*** New Category Container ***/
       function catContain(cat) {
-        $('.read').append('<div class="read-category" value="'+cat+'"><h1>'+cat+'</h1></div>')
+        $('.read').append('<div class="read-category" data-category="'+cat+'"><h1>'+cat+'</h1></div>')
       };
 
       /*** Category Dropdown ***/
       function categories(){
         var uniqueCats = cards.map(function(note) {
-          return note.categoryAdd;
-        }).reduce(function(arr, category){
-          if(arr.indexOf(category) === -1){
-            arr.push(category);
-          };
-          return arr;
-        }, []);
-        console.log(uniqueCats); // Delete later
+            return note.categoryAdd;
+          }).reduce(function(arr, category){
+            if(arr.indexOf(category) === -1){
+              arr.push(category);
+            };
+            return arr;
+          }, []);
+
         $('select option:first-child').nextAll().remove();
         uniqueCats.forEach(function(category) {
           $('#pile-select').append('<option>'+category+'</option>');
