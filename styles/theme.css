@@ -19,26 +19,53 @@
 
 .accordion-control {
   color: white;
-  background-color: #FC3835;
+  background-color: #454343;
 }
 
 .accordion-panel {
   color: black;
   display: none;
+  margin: 4px;
+  width: 200px;
+  height: auto;
+  box-shadow: 5px 5px 5px #555;
+  background-image: url('http://www.quality-improvement-matters.com/images/indexcard-blank.jpg');
 }
 
+/*** Category Input Container ***/
 .create-pile {
   display: flex;
   flex-direction: row;
-  width: 0px;
+  flex-wrap: wrap;
   height: auto;
   background-color: none;
 }
 
+/*** Style properties for the Create button ***/
 .create-button {
   color: white;
-  background-color: #FC3835;
+  background-color: #454343;
   margin: 10px 10px;
   height: 50px;
   width: 125px;
+}
+
+.create-button:hover,
+.create-button:focus {
+  color: #888;
+}
+
+/* Read Category Container */
+.read-category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 5px 10px 0px 10px;
+  background-color: none;
+}
+
+.read-category h1 {
+  width: 100%;
 }

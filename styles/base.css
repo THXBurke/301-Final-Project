@@ -1,12 +1,18 @@
 /*BASE STYLING INCLUDES ELEMENT TAGS ONLY*/
+body {
+  background-image: url('https://farm1.staticflickr.com/55/147874576_8a453079f3_o_d.jpg');
+}
+
 header {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: auto;
-  height: 75px;
+  height: 100px;
   background-color: #454343;
   max-width: 800px;
   margin: 0px auto;
+  margin-top: 10px;
 }
 
 section {
@@ -30,7 +36,17 @@ footer {
 }
 
 h1, h2 {
+  align-self: center;
   color: #fff;
+}
+
+header h1 {
+  margin: 0px auto;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin: auto;
 }
 
 ul {
@@ -40,20 +56,20 @@ ul {
   list-style-type: none;
 }
 
-div {
+/*div {
   width: 200px;
   height: 120px;
-  /*margin: 50px;*/
   box-shadow: 5px 5px 5px #555;
   background-color: white;
-
-}
+}*/
 
 form {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 5px 50px;
+  margin-left: 0px;
+  margin: auto;
 }
 
 select {
