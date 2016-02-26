@@ -19,6 +19,7 @@
 
 .links {
   margin-top: 7%;
+  flex-wrap: wrap;
 }
 
 .accordion-control {
