@@ -33,6 +33,7 @@
 }
 
 .accordion-item {
+  border: 2px black;
   display: none;
 }
 
