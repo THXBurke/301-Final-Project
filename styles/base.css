@@ -1,4 +1,7 @@
 /*BASE STYLING INCLUDES ELEMENT TAGS ONLY*/
+* {
+  border: 1px black;
+}
 body {
   background-image: url('https://farm1.staticflickr.com/55/147874576_8a453079f3_o_d.jpg');
 }

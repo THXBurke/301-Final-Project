@@ -4,58 +4,77 @@ function Card(noteName, noteContent, categoryAdd){
         this.categoryAdd = categoryAdd;
       }
 
-      Card.prototype.toHTML = function(){
-        var template = Handlebars.compile($("#entry-template").text());
-        return template(this);
-      }
+Card.prototype.toHTML = function(){
+  var template = Handlebars.compile($("#entry-template").text());
+  return template(this);
+}
 
-      var cards = [];
+var cards = [];
 
-      /*** Submit New Card Handling ***/
-      $("form").submit(function(event) {
-        //$('.accordion').remove();
-        var description = $('#card-name').val();
-        var content = $('#card-content').val();
-        var categoryAdd;
-          if($('#new-category').val()){
-            categoryAdd = $('#new-category').val();
-            catContain(categoryAdd);
-          }else{
-            categoryAdd = $('#pile-select').val();
-          };
-        cards.push(new Card(description, content, categoryAdd));
-        console.log(cards);
+/*** Submit New Card Handling ***/
+$("form").submit(function(event) {
+  event.preventDefault();
+  var description = $('#card-name').val();
+  var content = $('#card-content').val();
+  var categoryAdd;
+    if($('#new-category').val()){
+      categoryAdd = $('#new-category').val();
+      catContain(categoryAdd);
+    }else{
+      categoryAdd = $('#pile-select').val();
+    };
+  cards.push(new Card(description, content, categoryAdd));
+  console.log(cards);
 
-        var lastCard = cards.length - 1;
-        $('div'+'[value='+categoryAdd+']').append(cards[lastCard].toHTML());
-        //TODO: Problem - we remove everything at the beginning, which means we are appending everything to whatever the latest 'categoryAdd' is. We no longer want to remove everything, we only want to append whatever is the last card in the 'cards' array.
-        // cards.forEach(function(note) {
-        //   $('div'+'[value='+categoryAdd+']').append(note.toHTML());
-        // })
-        accordionExecute();
-        categories();
-        event.preventDefault();
-      });
-      console.log(cards); // Delete later
+  var lastCard = cards.length - 1;
+  $('div'+'[data-category='+'"'+categoryAdd+'"'+']').append(cards[lastCard].toHTML());
 
-      /*** New Category Container ***/
-      function catContain(cat) {
-        $('.read').append('<div class="read-category" value="'+cat+'"><h1>'+cat+'</h1></div>')
+  accordionExecute();
+  categories();
+  addEraseHandler();
+});
+
+/*** New Category Container ***/
+function catContain(cat) {
+  $('.read').append('<div class="read-category" data-category="'+cat+'"><h1>'+cat+'</h1></div>')
+};
+
+/* Adds Event Handler to 'Erase' buttons */
+function addEraseHandler() {
+  $('.erase-img').on('click', function(event) {
+    event.preventDefault();
+    console.log($(this).siblings('button').text());
+    $(this).parent('li').parent('ul').remove();
+    // Start real function below
+    $('.accordion-button') // gets an array of all accordion-button elements
+    // Array index of names/buttons match order in which card object was made
+    var thisName = $(this).siblings('button').text();
+    var indexOfName = cards.map(function(card) {
+      return card.noteName
+    }).indexOf(thisName);
+    cards.splice(indexOfName, 1);
+    console.log(cards);
+  })
+}
+
+/*** Category Dropdown ***/
+function categories(){
+  var uniqueCats = cards.map(function(note) {
+      return note.categoryAdd;
+    }).reduce(function(arr, category){
+      if(arr.indexOf(category) === -1){
+        arr.push(category);
       };
+      return arr;
+    }, []);
 
-      /*** Category Dropdown ***/
-      function categories(){
-        var uniqueCats = cards.map(function(note) {
-          return note.categoryAdd;
-        }).reduce(function(arr, category){
-          if(arr.indexOf(category) === -1){
-            arr.push(category);
-          };
-          return arr;
-        }, []);
-        console.log(uniqueCats); // Delete later
-        $('select option:first-child').nextAll().remove();
-        uniqueCats.forEach(function(category) {
-          $('#pile-select').append('<option>'+category+'</option>');
-        });
-      };
+  $('select option:first-child').nextAll().remove();
+  uniqueCats.forEach(function(category) {
+    $('#pile-select').append('<option>'+category+'</option>');
+  });
+};
+
+$('.erase-button').on('click', function() {
+
+  console.log('hello world');
+})

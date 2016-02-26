@@ -32,6 +32,11 @@
   background-image: url('http://www.quality-improvement-matters.com/images/indexcard-blank.jpg');
 }
 
+.accordion-item {
+  border: 2px black;
+  display: none;
+}
+
 /*** Category Input Container ***/
 .create-pile {
   display: flex;
