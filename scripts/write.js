@@ -32,7 +32,7 @@ $("form").submit(function(event) {
   accordionExecute()
   categories();
   addEraseHandler();
-  $('form').find('input, textarea').val('');
+  $('form').find('input, textarea').val(''); // Clears form
 });
 
 /*** New Category Container ***/
