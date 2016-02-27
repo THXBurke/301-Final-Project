@@ -27,16 +27,17 @@ $("form").submit(function(event) {
   console.log(cards);
 
   var lastCard = cards.length - 1;
-  $('div'+'[data-category='+'"'+categoryAdd+'"'+']').append(cards[lastCard].toHTML());
+  $('div'+'[data-category='+'"'+categoryAdd+'"'+']').append(cards[lastCard].toHTML()).slideDown('slow');
 
-  accordionExecute();
+  accordionExecute()
   categories();
   addEraseHandler();
+  $('form').find('input, textarea').val('');
 });
 
 /*** New Category Container ***/
 function catContain(cat) {
-  $('.read').append('<div class="read-category" data-category="'+cat+'"><h1>'+cat+'</h1></div>')
+  $('.read').append('<div class="read-category" style="display: none;" data-category="'+cat+'"><h1>'+cat+'</h1></div>');
 };
 
 /* Adds Event Handler to 'Erase' buttons */
@@ -45,13 +46,10 @@ function addEraseHandler() {
     event.preventDefault();
     console.log($(this).siblings('button').text());
     $(this).parent('li').parent('ul').remove();
-    // Start real function below
-    $('.accordion-button') // gets an array of all accordion-button elements
-    // Array index of names/buttons match order in which card object was made
     var thisName = $(this).siblings('button').text();
     var indexOfName = cards.map(function(card) {
       return card.noteName
-    }).indexOf(thisName);
+      }).indexOf(thisName);
     cards.splice(indexOfName, 1);
     console.log(cards);
   })
