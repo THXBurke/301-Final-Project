@@ -1,16 +1,21 @@
+
+* {
+  border: 1px black;
+}
+body {
+  background-image: url('https://farm1.staticflickr.com/55/147874576_8a453079f3_o_d.jpg');
+}
+
 header {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: auto;
-  height: 75px;
+  height: 100px;
   background-color: #454343;
   max-width: 800px;
   margin: 0px auto;
-}
-
-
-h1, h2 {
-  color: #fff;
+  margin-top: 10px;
 }
 
 section {
@@ -22,7 +27,68 @@ section {
   margin: 0px auto;
 }
 
-body {
-    background-image: url("");
-    background-color: #cccccc;
+h1, h2 {
+  align-self: center;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0px auto;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  list-style-type: none;
+}
+
+/*div {
+  width: 200px;
+  height: 120px;
+  box-shadow: 5px 5px 5px #555;
+  background-color: white;
+}*/
+
+form {
+  background-color: ;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 0px;
+  margin: auto;
+}
+
+select {
+  width: auto;
+}
+
+textarea {
+  margin-bottom: 5px;
+}
+
+b {
+  padding-top: 0px;
+  margin-top: 0px;
+  height: 20px;
+}
+
+.shortcut {
+
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 50px;
+  background-color: #FC3835;
+  max-width: 800px;
+  margin: 0px auto;
 }
