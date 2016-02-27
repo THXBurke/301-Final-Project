@@ -1,7 +1,5 @@
 
-* {
-  border: 1px black;
-}
+
 body {
   background-image: url('https://farm1.staticflickr.com/55/147874576_8a453079f3_o_d.jpg');
 }
@@ -19,6 +17,7 @@ header {
 }
 
 section {
+  background-color: #D9B689;
   border: black;
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +55,6 @@ ul {
 }*/
 
 form {
-  background-color: ;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
